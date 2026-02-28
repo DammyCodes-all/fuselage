@@ -23,9 +23,9 @@
     "/index.js"
   ],
   "scripts": {
-    "start": "webpack --watch --mode development",
+    "start": "node init && webpack --watch --mode development",
     "storybook": "storybook dev -p 6006 --no-version-updates",
-    "build": "run-s .:build:clean .:build:dev .:build:prod",
+    "build": "node init && run-s .:build:clean .:build:dev .:build:prod",
     ".:build:clean": "rimraf dist",
     ".:build:prod": "webpack --mode production",
     ".:build:dev": "webpack --mode development",
@@ -34,7 +34,7 @@
     "test": "jest --runInBand",
     "watch": "jest --watch",
     "docs": "cross-env NODE_ENV=production storybook build -o ../../static/fuselage",
-    "build-storybook": "cross-env NODE_ENV=production storybook build"
+    "build-storybook": "node init && cross-env NODE_ENV=production storybook build"
   },
   "dependencies": {
     "@rocket.chat/css-in-js": "workspace:~",

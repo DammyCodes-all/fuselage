@@ -28,11 +28,11 @@
     "/dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "node init && rollup -c",
     "docs": "typedoc",
     "lint": "lint",
     "lint-and-fix": "lint-and-fix",
-    "start": "rollup -c -w",
+    "start": "node init && rollup -c -w",
     "test": "jest --runInBand"
   },
   "devDependencies": {

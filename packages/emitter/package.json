@@ -27,7 +27,7 @@
     "/dist"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "node init && rollup -c",
     "lint": "lint",
     "lint-and-fix": "lint-and-fix",
     "test": "jest --runInBand",

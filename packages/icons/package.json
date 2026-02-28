@@ -21,7 +21,7 @@
     "/dist"
   ],
   "scripts": {
-    "build": "build-icons",
+    "build": "node init && build-icons",
     "lint": "lint",
     "lint-and-fix": "lint-and-fix"
   },

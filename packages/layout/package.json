@@ -23,7 +23,7 @@
     "/dist"
   ],
   "scripts": {
-    "build": "run-s .:build:clean .:build:esm .:build:cjs",
+    "build": "node init && run-s .:build:clean .:build:esm .:build:cjs",
     ".:build:clean": "rimraf dist",
     ".:build:esm": "tsc -p tsconfig.esm.json",
     ".:build:cjs": "tsc -p tsconfig.cjs.json",
@@ -32,7 +32,7 @@
     "test": "jest --runInBand",
     "docs": "typedoc",
     "storybook": "storybook dev -p 6006 --no-version-updates",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "devDependencies": {
     "@rocket.chat/fuselage": "workspace:~",

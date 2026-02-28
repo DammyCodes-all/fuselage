@@ -30,7 +30,7 @@
     "/typography.*"
   ],
   "scripts": {
-    "build": "run-s .:build:clean  .:build:legacy .:build",
+    "build": "node init && run-s .:build:clean  .:build:legacy .:build",
     ".:build": "node ./build --config ./config.js",
     ".:build:legacy": "build-design-tokens",
     ".:build:clean": "rimraf dist"
